@@ -3,14 +3,14 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   mode: "development",
-  entry: path.resolve(__dirname, "src/app.js"),
+  entry: path.resolve(__dirname, "src/app.tsx"), // change entry point
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "app.js",
   },
   resolve: {
     modules: [path.resolve(__dirname, "node_modules")],
-    extensions: [".js", ".jsx"],
+    extensions: [".js", ".jsx", "ts", "tsx"], // ts, tsx
   },
     module: {
     rules: [
